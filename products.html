@@ -84,36 +84,6 @@
 ```
 <main>
   <section class="product-grid">
-    <a href="product-tiller.html" class="product-card">
-      <img src="images/tiller.jpg" alt="Tiller" />
-      <h3>Tiller</h3>
-      <p>Heavy-duty tiller ideal for soil preparation.</p>
-      <div class="price-box">
-        <button class="toggle" data-with="₹15,000" data-without="₹12,500">Show Price</button>
-        <p class="price-display">Click to view price</p>
-      </div>
-    </a>
-
-    <a href="product-sprayer.html" class="product-card">
-      <img src="images/sprayer.jpg" alt="Sprayer" />
-      <h3>Sprayer</h3>
-      <p>Manual and motorized sprayers for all garden needs.</p>
-      <div class="price-box">
-        <button class="toggle" data-with="₹9,000" data-without="₹7,500">Show Price</button>
-        <p class="price-display">Click to view price</p>
-      </div>
-    </a>
-
-    <a href="product-fogging-machine.html" class="product-card">
-      <img src="images/fogging-machine.jpg" alt="Fogging Machine" />
-      <h3>Fogging Machine</h3>
-      <p>Efficient mosquito control fogging system.</p>
-      <div class="price-box">
-        <button class="toggle" data-with="₹12,000" data-without="₹10,000">Show Price</button>
-        <p class="price-display">Click to view price</p>
-      </div>
-    </a>
-
     <a href="product-brushcutter.html" class="product-card">
       <img src="images/brush-cutter.jpg" alt="Brush Cutter" />
       <h3>Brush Cutter</h3>
@@ -184,8 +154,10 @@
 
       if (current === withPrice) {
         display.textContent = withoutPrice;
+        button.textContent = "Show Price";
       } else {
         display.textContent = withPrice;
+        button.textContent = "Hide Price";
       }
     });
   });
